@@ -1,7 +1,7 @@
 # HintU
 
 > **Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features**  
-> Wuzhou Quan, Wei Zhou, Weiming Wang, Haoran Xie, Fu Lee Wang, Mingqiang Wei
+> Wuzhou Quan, Wei Zhao, Weiming Wang, Haoran Xie, Fu Lee Wang, Mingqiang Wei
 
 We have submitted our paper to IEEE TGRS for review and will make the related code accessible after publication.
 
