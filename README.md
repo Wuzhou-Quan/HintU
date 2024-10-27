@@ -21,7 +21,7 @@ For MiM+, [state-spaces/mamba](https://github.com/state-spaces/mamba) is also re
 ### Datasets
 
 #### 1. File system architecture
-Please ensure that the IRSTD1K, NUDT-SIRST, and SIRSTv2 datasets are properly downloaded and organized as follows:
+Please ensure that the [IRSTD1K](https://github.com/RuiZhang97/ISNet), [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection), and [SIRSTv2](https://github.com/YimianDai/open-sirst-v2) datasets are properly downloaded and organized as follows:
 
 ```
 root
