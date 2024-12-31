@@ -1,10 +1,29 @@
 # HintU
 
+[![TGRS](https://img.shields.io/badge/IEEE%20TGRS-2024-blue.svg)](https://ieeexplore.ieee.org/document/10764792) [![ArXiv](https://img.shields.io/badge/ArXiv-2024-red.svg)](https://arxiv.org/abs/2406.13445)
 > **Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features**  
-> Wuzhou Quan, Wei Zhao, Weiming Wang, Haoran Xie, Fu Lee Wang, Mingqiang Wei   
-> [Paper(ArXiv)](https://arxiv.org/abs/2406.13445)
+> Wuzhou Quan, Wei Zhao, Weiming Wang, Haoran Xie, Fu Lee Wang, Mingqiang Wei
 
-We have submitted our paper to IEEE TGRS for review and will make the related code accessible after publication.
+This repository contains the official implementation of the paper "**Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features**".
+Besides, it is also a simple and integrated framework for infrared small target detection, which is easy to use and extend.
+
+If our work is helpful to you, please cite it as follows:
+
+```
+@ARTICLE{
+      quan2024lost,
+      author={Quan, Wuzhou and Zhao, Wei and Wang, Weiming and Xie, Haoran and Wang, Fu Lee and Wei, Mingqiang},
+      journal={IEEE Transactions on Geoscience and Remote Sensing},
+      title={Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features},
+      year={2024},
+      volume={},
+      number={},
+      pages={1-1},
+      doi={10.1109/TGRS.2024.3504594}
+}
+```
+
+**_Thanks for your attention!_**
 
 ## Prerequisites
 
@@ -21,10 +40,11 @@ For MiM+, [state-spaces/mamba](https://github.com/state-spaces/mamba) is also re
 ### Datasets
 
 #### 1. File system architecture
+
 Please ensure that the [IRSTD1K](https://github.com/RuiZhang97/ISNet), [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection), and [SIRSTv2](https://github.com/YimianDai/open-sirst-v2) datasets are properly downloaded and organized as follows:
 
 ```
-root
+HINTU (Root folder)
 └── data
     ├── IRSTD1K
     │   ├── IRSTD1k_Img
@@ -39,6 +59,7 @@ root
         ├── images
         └── masks
 ```
+
 If you need a custom folder structure, modify the `folder_arch` dictionary in the `gsettings.py` file to fit your folder architecture.
 Additionally, ensure these folders have read and write permissions.
 
@@ -55,11 +76,30 @@ You can modify the value of 0.5 to set the proportion of the test set (the defau
 
 ### Training
 
+If you want to train a model on IRSTD1k with batch size of 4, you can run the following command:
+
 ```bash
-python train.py --model_arch_name UNet --train_dataset_name irstd1k_train --val_dataset_name irstd1k_test --max_epoches 300
+python train.py -m HintHCFNet -t irstd1k_train -v irstd1k_test -b 4 --max_epoches 300
 ```
 
 **ClearML** is used for logging and visualization, for more details, please refer to their [official doc](https://clear.ml/docs/latest/docs/).
+
+`--model_arch_name` or `-m` specifies the model architecture (located in the path of [`deployments/models`](deployments/models)). You can refer to the existing files to create your own model architecture (b.t.w. _it's quite simple_), or refer to the [official MMEngine config file documentation](https://mmengine.readthedocs.io/en/latest/advanced_tutorials/config.html) for more details.
+
+
+`--train_dataset_name` or `-t` and `--val_dataset_name` or `-v` decide the training and validation datasets (located in the path of [`deployments/datasets`](deployments/datasets)), respectively.
+
+`--batch_size` or `-b` specifies the batch size.
+
+`--max_epoches` specifies the maximum number of training epochs.
+
+### Testing
+
+_Todo_
+
+### Evaluation
+
+_Todo_
 
 ## Checkpoints
 
@@ -69,15 +109,3 @@ All released pre-trained weights are available in [Google Drive](https://drive.g
 
 A large part of the code is borrowed from [ShawnBIT/UNet-family](https://github.com/ShawnBIT/UNet-family), [SuGuilin/UIUNet_mod](https://github.com/SuGuilin/UIUNet_mod), [txchen-USTC/MiM-ISTD](https://github.com/txchen-USTC/MiM-ISTD), [zhengshuchen/HCFNet](https://github.com/zhengshuchen/HCFNet), and so on.
 Thanks for their wonderful works.
-
-## Citation
-
-```
-@misc{quan2024lost,
-      title={Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features}, 
-      author={Wuzhou Quan and Wei Zhao and Weiming Wang and Haoran Xie and Fu Lee Wang and Mingqiang Wei},
-      year={2024},
-      eprint={2406.13445},
-      archivePrefix={arXiv}
-}
-```

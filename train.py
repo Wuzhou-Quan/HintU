@@ -10,11 +10,11 @@ project_name = gsettings.project_name
 
 
 @click.command()
-@click.option("--model_arch_name", prompt="Input model arch in deployments folder", type=str, required=True, help="Input the arch in deployments folder")
-@click.option("--train_dataset_name", prompt="Input training dataset in deployments folder", type=str, required=True, help="Input the training dataset in deployments folder")
-@click.option("--val_dataset_name", prompt="Input validation dataset in deployments folder", type=str, required=True, help="Input the validation dataset in deployments folder")
-@click.option("--batch_size", type=int, default=4)
-@click.option("--max_epoches", type=int, default=100)
+@click.option("-m", "--model_arch_name", prompt="Input model arch in deployments folder", type=str, required=True, help="Input the arch in deployments folder")
+@click.option("-t", "--train_dataset_name", prompt="Input training dataset in deployments folder", type=str, required=True, help="Input the training dataset in deployments folder")
+@click.option("-v", "--val_dataset_name", prompt="Input validation dataset in deployments folder", type=str, required=True, help="Input the validation dataset in deployments folder")
+@click.option("-b", "--batch_size", type=int, default=4)
+@click.option("--max_epoches", type=int, default=300)
 @click.option("--ckpt_path", type=str, default=None)
 @click.option("--with_aug", type=bool, default=True)
 @click.option("--lr", type=float, default=1e-3)
