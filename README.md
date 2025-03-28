@@ -1,6 +1,6 @@
 # HintU
 
-[![TGRS](https://img.shields.io/badge/IEEE%20TGRS-2024-blue.svg)](https://ieeexplore.ieee.org/document/10764792) [![ArXiv](https://img.shields.io/badge/ArXiv-2024-red.svg)](https://arxiv.org/abs/2406.13445)
+[![TGRS](https://img.shields.io/badge/IEEE%20TGRS-2025-blue.svg)](https://ieeexplore.ieee.org/document/10764792) [![ArXiv](https://img.shields.io/badge/ArXiv-2024-red.svg)](https://arxiv.org/abs/2406.13445)
 > **Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features**  
 > Wuzhou Quan, Wei Zhao, Weiming Wang, Haoran Xie, Fu Lee Wang, Mingqiang Wei
 
@@ -10,16 +10,16 @@ Besides, it is also a simple and integrated framework for infrared small target 
 If our work is helpful to you, please cite it as follows:
 
 ```
-@ARTICLE{
-      quan2024lost,
-      author={Quan, Wuzhou and Zhao, Wei and Wang, Weiming and Xie, Haoran and Wang, Fu Lee and Wei, Mingqiang},
-      journal={IEEE Transactions on Geoscience and Remote Sensing},
-      title={Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features},
-      year={2024},
-      volume={},
-      number={},
-      pages={1-1},
-      doi={10.1109/TGRS.2024.3504594}
+@ARTICLE{quan2024lost,
+  author={Quan, Wuzhou and Zhao, Wei and Wang, Weiming and Xie, Haoran and Lee Wang, Fu and Wei, Mingqiang},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Lost in UNet: Improving Infrared Small Target Detection by Underappreciated Local Features}, 
+  year={2025},
+  volume={63},
+  number={},
+  pages={1-15},
+  keywords={Feature extraction;Semantics;Object detection;Geoscience and remote sensing;Filtering theory;Convolution;Clutter;Weight measurement;Visualization;Transformers;HintU;infrared small target detection (ISTD);UNet},
+  doi={10.1109/TGRS.2024.3504594}
 }
 ```
 
